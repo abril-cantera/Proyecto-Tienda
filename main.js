@@ -32,6 +32,8 @@ function toggleMobileMenu() {
 
 function toggleCarritoAside() {
   const isMobileMenuClosed = mobileMenu.classList.contains("inactive");
+  const isDesktopMenuClosed = desktopMenu.classList.contains("inactive");
+
   if (!isMobileMenuClosed || !isDesktopMenuClosed) {
     mobileMenu.classList.add("inactive");
     desktopMenu.classList.add("inactive");
@@ -49,14 +51,20 @@ productList.push({
     "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
 });
 productList.push({
-  name: "Pantalla",
+  name: "Parlante",
   price: 220,
   image:
     "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
 });
 productList.push({
-  name: "Compu",
-  price: 620,
+  name: "Teclado",
+  price: 170,
+  image:
+    "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+});
+productList.push({
+  name: "Monitor",
+  price: 250,
   image:
     "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
 });
@@ -67,14 +75,20 @@ productList.push({
     "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
 });
 productList.push({
-  name: "Pantalla",
+  name: "Parlante",
   price: 220,
   image:
     "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
 });
 productList.push({
-  name: "Compu",
-  price: 620,
+  name: "Teclado",
+  price: 170,
+  image:
+    "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+});
+productList.push({
+  name: "Monitor",
+  price: 250,
   image:
     "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
 });
@@ -85,25 +99,14 @@ productList.push({
     "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
 });
 productList.push({
-  name: "Pantalla",
+  name: "Parlante",
   price: 220,
   image:
     "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
 });
-productList.push({
-  name: "Compu",
-  price: 620,
-  image:
-    "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-});
-productList.push({
-  name: "Compu",
-  price: 620,
-  image:
-    "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-});
+
+/* Esto recorre el array y agrega los productos al HTML */
 function renderProducts(arr) {
-  /* Esto recorre el array y agrega los productos al HTML */
   for (product of arr) {
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
